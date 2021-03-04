@@ -43,15 +43,15 @@ public class M_GestioneGettoneNazionale extends JFrame {
 		GettoneNazionale_L.setBounds(23, 11, 445, 32);
 		contentPane.add(GettoneNazionale_L);
 		
-		JButton btnNewButton = new JButton("Ok");
-		btnNewButton.setBackground(new Color(0, 0, 0));
-		btnNewButton.setBounds(404, 393, 66, 23);
-		contentPane.add(btnNewButton);
+		JButton Ok_B = new JButton("Ok");
+		Ok_B.setBackground(new Color(0, 0, 0));
+		Ok_B.setBounds(404, 393, 66, 23);
+		contentPane.add(Ok_B);
 		
-		JButton btnNewButton_1 = new JButton("Indietro");
-		btnNewButton_1.setBackground(new Color(0, 0, 0));
-		btnNewButton_1.setBounds(323, 393, 71, 23);
-		contentPane.add(btnNewButton_1);
+		JButton Indietro_B = new JButton("Indietro");
+		Indietro_B.setBackground(new Color(0, 0, 0));
+		Indietro_B.setBounds(323, 393, 71, 23);
+		contentPane.add(Indietro_B);
 	}
 
 }
