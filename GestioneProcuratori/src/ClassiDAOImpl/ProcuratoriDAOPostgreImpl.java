@@ -50,7 +50,7 @@ public class ProcuratoriDAOPostgreImpl implements ProcuratoriDAO {
 		InserisciProcuratoreDB_PS.setString(4, procuratore.getNumeroTelefonico());
 		InserisciProcuratoreDB_PS.setString(5, procuratore.getNumeroTelefonico2());
 		InserisciProcuratoreDB_PS.setString(6, procuratore.getEmail());
-		InserisciProcuratoreDB_PS.setDate(7, DataUtil.convertUtilToSql(procuratore.getDataN()));
+		InserisciProcuratoreDB_PS.setDate(7, DataUtil.convertiDataInSql(procuratore.getDataN()));
 		
 		InserisciProcuratoreDB_PS.executeUpdate();
 }
