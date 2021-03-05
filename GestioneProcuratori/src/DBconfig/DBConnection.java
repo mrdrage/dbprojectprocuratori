@@ -20,7 +20,7 @@ public class DBConnection  {
 	private final String PASSWORD = "dbprojectadmin";
 	private final String IP = "dbprocuratori1.c1r3woxfz75h.us-east-2.rds.amazonaws.com";
 	private final String PORT = "5432";
-	private String url = "jdbc:postgresql://" + IP + ":" + PORT + "/dbprocuratori1";
+	private String url = "jdbc:postgresql://" + IP + ":" + PORT + "/dbprocuratori";
 
 	private DBConnection() throws SQLException
 	{
