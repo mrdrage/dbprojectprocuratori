@@ -1,5 +1,7 @@
 package GUI;
 
+import Starter.Controller;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -12,11 +14,14 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_CercaProcuratore extends JFrame {
 
 	private JPanel contentPane;
 	private JComboBox CercaProcuratore_CO;
+	Controller controller;
 
 	/**
 	 * Launch the application.
@@ -26,7 +31,8 @@ public class M_CercaProcuratore extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public M_CercaProcuratore() {
+	public M_CercaProcuratore(Controller C) {
+		controller = C;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 446, 174);
 		contentPane = new JPanel();
@@ -41,6 +47,11 @@ public class M_CercaProcuratore extends JFrame {
 		contentPane.add(CercaProcuratore_L);
 		
 		JButton CercaProcuratore_B = new JButton("Cerca");
+		CercaProcuratore_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.IniziaRicerca();
+			}
+		});
 		CercaProcuratore_B.setBounds(337, 101, 61, 23);
 		contentPane.add(CercaProcuratore_B);
 		
@@ -48,5 +59,7 @@ public class M_CercaProcuratore extends JFrame {
 		CercaProcuratore_CO.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		CercaProcuratore_CO.setBounds(85, 67, 234, 23);
 		contentPane.add(CercaProcuratore_CO);
+		
+		
 	}
 }

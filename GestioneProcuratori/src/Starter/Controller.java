@@ -1,5 +1,6 @@
 package Starter;
 
+import GUI.*;
 import java.util.List;
 import entita.*;
 import java.sql.SQLException;
@@ -13,9 +14,14 @@ import DBconfig.DBConnection;
 
 public class Controller {
 	
+	M_CercaProcuratore MCP = null;  
+	String prova;
 		
 	
 	public void IniziaRicerca () {
+		
+		MCP.setVisible (false);
+		
 		
 	}
 	
@@ -42,16 +48,14 @@ public class Controller {
 	public List<Integer> AnniLavorativi (int anno){
 		return null;
 	}
-
+	
+     public Controller (){
+			MCP = new M_CercaProcuratore(this);
+			
+		}
 	public static void main(String[] args) {
 
-		try{
-			DBConnection newdbconnection = DBConnection.getInstance();
-			Connection pon = newdbconnection.getConnection();
-		}
-			catch(SQLException e){
-				
-			}
+		Controller C = new Controller();
 		
 	}
 

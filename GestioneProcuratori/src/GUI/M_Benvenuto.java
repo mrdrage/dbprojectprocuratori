@@ -17,6 +17,8 @@ import java.awt.event.ActionEvent;
 public class M_Benvenuto extends JFrame {
 
 	private JPanel contentPane;
+	String prova ="prova combo";
+	
 
 	/**
 	 * Launch the application.
@@ -57,6 +59,8 @@ public class M_Benvenuto extends JFrame {
 		});
 		CercaProcuratore_B.setBackground(new Color(0, 0, 0));
 		CercaProcuratore_B.setBounds(78, 115, 179, 32);
-		contentPane.add(CercaProcuratore_B);
+		
 	}
 }
+
+
