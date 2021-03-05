@@ -7,6 +7,9 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Starter.Controller;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
@@ -14,16 +17,14 @@ import java.awt.Font;
 
 public class M_DataProcuratoreErrata extends JDialog {
 
+	Controller controller = null;
 	private final JPanel contentPanel = new JPanel();
-
-	/**
-	 * Launch the application.
-	 */
 
 	/**
 	 * Create the dialog.
 	 */
-	public M_DataProcuratoreErrata() {
+	public M_DataProcuratoreErrata(Controller c) {
+		controller = c;
 		setBounds(100, 100, 252, 154);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBackground(new Color(250, 240, 230));

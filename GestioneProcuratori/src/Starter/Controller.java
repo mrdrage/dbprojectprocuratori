@@ -4,6 +4,8 @@ import GUI.*;
 
 
 import java.util.List;
+
+import ClassiDAOImpl.ProcuratoriDAOPostgreImpl;
 import entita.*;
 import java.sql.SQLException;
 
@@ -18,16 +20,19 @@ import java.text.SimpleDateFormat;
 import java.util.Date;  
 
 public class Controller {
-	Date d = null;
+	M_DataProcuratoreErrata DataProcuratoreErrata = null;
 	M_CercaProcuratore CercaProcuratore = null;  
 	M_Benvenuto Benvenuto = null;
 	M_NuovoProcuratore NuovoProcuratore = null;
-		
+	ProcuratoriDAOPostgreImpl ProcuratoriDAOpostgreImpl= null;
 	
 	public void NuovoProcuratore(String Nome,String Cognome,String CodiceFiscale,String NumeroTelefono,String NumeroTelefono2,String Email,
 			String DataNGiorno, String DataNMese, String DataNAnno) {
-		try {
+		
 		Procuratori procuratore = new Procuratori();
+		
+		try {
+		
 		procuratore.setNome(Nome);
 		procuratore.setCognome(Cognome);
 		procuratore.setCodiceFiscale(CodiceFiscale);
@@ -36,14 +41,22 @@ public class Controller {
 		procuratore.setEmail(Email);
 		
 		String DataNascita = DataNGiorno + DataNMese + DataNAnno;
-		SimpleDateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");  
-		Date date1=formatter1.parse(DataNascita);  
-		procuratore.setDataN(date1);
+		SimpleDateFormat formatoData1 = new SimpleDateFormat("dd/MM/yyyy");  
+		Date Data1 = formatoData1.parse(DataNascita);  
+		procuratore.setDataN(Data1);
 		}
 		catch (Exception e) {
+			DataProcuratoreErrata.setVisible(true);
+		}
+		
+		try {
+				ProcuratoriDAOpostgreImpl.InserisciProcuratoreDB(procuratore);
+				
+		}catch (SQLException e) {
 			
 		}
 		
+	
 		
 		
 		
@@ -95,10 +108,11 @@ public class Controller {
 	}
 	
      public Controller (){
+    	    DataProcuratoreErrata = new M_DataProcuratoreErrata(this);
 			CercaProcuratore = new M_CercaProcuratore(this);
 			Benvenuto = new M_Benvenuto(this);
 			NuovoProcuratore = new M_NuovoProcuratore(this);
-			
+		//	ProcuratoreDAO = new ProcuratoriDAOPostgreImpl();
 			Benvenuto.setVisible(true);
 		}
 	public static void main(String[] args) {
