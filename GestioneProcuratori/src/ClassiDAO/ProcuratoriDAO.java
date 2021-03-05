@@ -2,11 +2,13 @@ package ClassiDAO;
 
 import entita.Procuratori;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface ProcuratoriDAO {
 	
-	boolean TrovaProcuratore(String CodiceFiscale);
-	Procuratori getInfoProcuratore (String CodiceFiscale);
-    List<Procuratori> getProcuratori ();
+	boolean TrovaProcuratore(String CodiceFiscale) throws SQLException;
+	Procuratori getInfoProcuratore (String CodiceFiscale) throws SQLException;
+    List<Procuratori> getProcuratori () throws SQLException;
+    void InserisciProcuratoreDB (Procuratori procuratore) throws SQLException;
 }

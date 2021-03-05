@@ -86,6 +86,12 @@ public class M_NuovoProcuratore extends JFrame {
 		contentPane.add(DataN_L);
 		
 		JButton Avanti_B = new JButton("Avanti");
+		Avanti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				controller.NuovoProcuratore (Nome_TF.getText(), Cognome_TF.getText(), CodiceFiscale_TF.getText(), NumeroTelefono_TF.getText(), NumeroTelefono2_TF.getText(),Email_TF.getText(),DataN_TF.getText());
+			}
+		});
 		Avanti_B.setBounds(260, 467, 89, 23);
 		contentPane.add(Avanti_B);
 		
@@ -95,6 +101,7 @@ public class M_NuovoProcuratore extends JFrame {
 				c.AnnullaInserimentoProcuratore();
 			}
 		});
+		
 		Annulla_B.setBounds(161, 467, 89, 23);
 		contentPane.add(Annulla_B);
 		
@@ -137,6 +144,9 @@ public class M_NuovoProcuratore extends JFrame {
 		Nome_TF.setBounds(194, 79, 145, 20);
 		contentPane.add(Nome_TF);
 		Nome_TF.setColumns(10);
+		
+		
 	}
+
 
 }

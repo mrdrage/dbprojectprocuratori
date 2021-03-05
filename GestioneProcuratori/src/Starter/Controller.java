@@ -14,25 +14,45 @@ import DBconfig.DBConnection;
 
 public class Controller {
 	
-	M_CercaProcuratore MCP = null;  
-	M_Benvenuto B = null;
-	M_NuovoProcuratore NP = null;
+	M_CercaProcuratore CercaProcuratore = null;  
+	M_Benvenuto Benvenuto = null;
+	M_NuovoProcuratore NuovoProcuratore = null;
 		
 	
-	public void InserisciProcuratore() {
-		B.setVisible(false);
-		NP.setVisible(true);
+	public void NuovoProcuratore(String Nome,String Cognome,String CodiceFiscale,String NumeroTelefono,String NumeroTelefono2,String Email,String DataN) {
+		Procuratori procuratore = new Procuratori();
+		procuratore.setNome(Nome);
+		procuratore.setCognome(Cognome);
+		procuratore.setCodiceFiscale(CodiceFiscale);
+		procuratore.setNumeroTelefonico(NumeroTelefono);
+		procuratore.setNumeroTelefonico2(NumeroTelefono2);
+		procuratore.setEmail(Email);
+		//procuratore.setDataN(DataN);
+		
+		
+		
+		
+		
+		
+	}
+	
+	public void InserisciProcuratore () {
+		Benvenuto.setVisible(false);
+		
+		NuovoProcuratore.setVisible(true);
+		
 	}
 	
 	public void AnnullaInserimentoProcuratore() {
-		NP.setVisible(false);
-		B.setVisible(true);
+		NuovoProcuratore.setVisible(false);
+		Benvenuto.setVisible(true);
 	}
 	
 	public void IniziaRicerca () {
 		
-		B.setVisible (false);
-		MCP.setVisible(true);
+		Benvenuto.setVisible (false);
+		//interrogazione a ProcuratoriDAOPostgreImpl che restituisce una List procuratri
+		CercaProcuratore.setVisible(true);
 		
 	}
 	
@@ -61,11 +81,11 @@ public class Controller {
 	}
 	
      public Controller (){
-			MCP = new M_CercaProcuratore(this);
-			B = new M_Benvenuto(this);
-			NP = new M_NuovoProcuratore(this);
+			CercaProcuratore = new M_CercaProcuratore(this);
+			Benvenuto = new M_Benvenuto(this);
+			NuovoProcuratore = new M_NuovoProcuratore(this);
 			
-			B.setVisible(true);
+			Benvenuto.setVisible(true);
 		}
 	public static void main(String[] args) {
 

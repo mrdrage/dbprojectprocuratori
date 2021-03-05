@@ -65,6 +65,7 @@ public class Procuratori {
 	}
 	
 	public void setDataN(Date dataN) {
+	//	if (!dataN.equals("a%_b"))
 		DataN = dataN;
 	}
 	
