@@ -163,7 +163,7 @@ public class M_GestioneProcuratore extends JFrame {
 		JButton Contratti_B = new JButton("Contratti");
 		Contratti_B.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//Si apre la finestra Contratti
+				//Si apre la finestra SelezionaAtletaContratto, caricando gli atleti del procuratore nella combobox
 				//setVisible(false);
 			}
 		});
@@ -175,7 +175,7 @@ public class M_GestioneProcuratore extends JFrame {
 		JButton Atleti_B = new JButton("Atleti");
 		Atleti_B.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//Si apre la finestra CercaAtletaDettagli
+				//Si apre la finestra CercaAtletaDettagli, caricando tutti gli atleti del procuratore nella combobox
 				//setVisible(false);
 			}
 		});

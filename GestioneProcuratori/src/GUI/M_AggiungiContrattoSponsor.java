@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_AggiungiContrattoSponsor extends JFrame {
 
@@ -125,11 +127,25 @@ public class M_AggiungiContrattoSponsor extends JFrame {
 		VincoloContrattuale_TF.setColumns(10);
 		
 		JButton Avanti_B = new JButton("Avanti");
+		Avanti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se cé un errore nella data, appare la dialog ErroreDataSponsor
+				//oppure
+				//Appare la dialog ContrattoSponsorInserito
+				//setVisible(false)
+			}
+		});
 		Avanti_B.setBackground(new Color(0, 0, 0));
 		Avanti_B.setBounds(459, 450, 71, 23);
 		contentPane.add(Avanti_B);
 		
 		JButton Indietr_B = new JButton("Indietro");
+		Indietr_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Indietr_B.setBackground(new Color(0, 0, 0));
 		Indietr_B.setBounds(378, 450, 71, 23);
 		contentPane.add(Indietr_B);

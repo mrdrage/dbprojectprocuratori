@@ -12,6 +12,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_GestioneGettoneNazionale extends JFrame {
 
@@ -27,7 +29,7 @@ public class M_GestioneGettoneNazionale extends JFrame {
 	 */
 	public M_GestioneGettoneNazionale() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 519, 466);
+		setBounds(100, 100, 519, 439);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(245, 255, 250));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -46,14 +48,15 @@ public class M_GestioneGettoneNazionale extends JFrame {
 		contentPane.add(GettoneNazionale_L);
 		
 		JButton Ok_B = new JButton("Ok");
+		Ok_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Ok_B.setBackground(new Color(0, 0, 0));
-		Ok_B.setBounds(404, 393, 66, 23);
+		Ok_B.setBounds(404, 364, 66, 23);
 		contentPane.add(Ok_B);
-		
-		JButton Indietro_B = new JButton("Indietro");
-		Indietro_B.setBackground(new Color(0, 0, 0));
-		Indietro_B.setBounds(323, 393, 71, 23);
-		contentPane.add(Indietro_B);
 	}
 
 }

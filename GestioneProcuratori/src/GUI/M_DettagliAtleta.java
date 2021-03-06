@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_DettagliAtleta extends JFrame {
 
@@ -131,19 +133,26 @@ public class M_DettagliAtleta extends JFrame {
 		SerieClub_TF.setColumns(10);
 		
 		JButton Ok_B = new JButton("Ok");
+		Ok_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Ok_B.setBackground(new Color(0, 0, 0));
 		Ok_B.setBounds(423, 444, 52, 23);
 		contentPane.add(Ok_B);
 		
-		JButton Indietro_B = new JButton("Indietro");
-		Indietro_B.setBackground(new Color(0, 0, 0));
-		Indietro_B.setBounds(333, 444, 80, 23);
-		contentPane.add(Indietro_B);
-		
 		JButton GestisciGettoneNazionale_B = new JButton("Visualizza gettoni nazionale");
+		GestisciGettoneNazionale_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Apre la finestra GestioneGettoneNazionale, caricando prima i dati del gettone relativo all'atleta di cui si stanno guardando i dettagli
+				//setVisible(false);
+			}
+		});
 		GestisciGettoneNazionale_B.setBackground(new Color(0, 0, 0));
 		GestisciGettoneNazionale_B.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		GestisciGettoneNazionale_B.setBounds(39, 376, 253, 35);
+		GestisciGettoneNazionale_B.setBounds(108, 392, 253, 35);
 		contentPane.add(GestisciGettoneNazionale_B);
 	}
 

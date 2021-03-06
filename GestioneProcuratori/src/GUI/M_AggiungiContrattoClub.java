@@ -13,6 +13,8 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_AggiungiContrattoClub extends JFrame {
 
@@ -113,11 +115,25 @@ public class M_AggiungiContrattoClub extends JFrame {
 		VincoloContrattuale_TF.setColumns(10);
 		
 		JButton Avanti_B = new JButton("Avanti");
+		Avanti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se cé un errore nella data, appare la dialog ErroreDataClub
+				//oppure
+				//Appare la dialog ContrattoClubInserito
+				//setVisible(false)
+			}
+		});
 		Avanti_B.setBackground(new Color(0, 0, 0));
 		Avanti_B.setBounds(406, 433, 63, 23);
 		contentPane.add(Avanti_B);
 		
 		JButton Indietro_B = new JButton("Indietro");
+		Indietro_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Indietro_B.setBackground(new Color(0, 0, 0));
 		Indietro_B.setBounds(325, 433, 71, 23);
 		contentPane.add(Indietro_B);

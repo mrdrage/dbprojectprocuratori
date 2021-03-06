@@ -12,6 +12,8 @@ import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_CercaAtletaDettagli extends JFrame {
 
@@ -51,6 +53,12 @@ public class M_CercaAtletaDettagli extends JFrame {
 		contentPane.add(Indietro_B);
 		
 		JButton Avanti_B = new JButton("Avanti");
+		Avanti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Apre la finestra DettagliAtleta, caricando prima i dati dell'atleta selezionato 
+				//setVisible(false);
+			}
+		});
 		Avanti_B.setBackground(new Color(0, 0, 0));
 		Avanti_B.setBounds(352, 137, 71, 23);
 		contentPane.add(Avanti_B);

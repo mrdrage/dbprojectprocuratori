@@ -28,7 +28,7 @@ public class M_SelezionaAtletaContratto extends JFrame {
 	 */
 	public M_SelezionaAtletaContratto() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 457, 204);
+		setBounds(100, 100, 448, 245);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(250, 235, 215));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -38,27 +38,51 @@ public class M_SelezionaAtletaContratto extends JFrame {
 		JLabel ScegliAtleta_L = new JLabel("Seleziona un atleta: ");
 		ScegliAtleta_L.setFont(new Font("Verdana", Font.PLAIN, 20));
 		ScegliAtleta_L.setHorizontalAlignment(SwingConstants.CENTER);
-		ScegliAtleta_L.setBounds(10, 11, 414, 51);
+		ScegliAtleta_L.setBounds(10, 0, 414, 51);
 		contentPane.add(ScegliAtleta_L);
 		
 		JComboBox ScegliAtleta_CO = new JComboBox();
 		ScegliAtleta_CO.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		ScegliAtleta_CO.setBounds(10, 66, 414, 32);
+		ScegliAtleta_CO.setBounds(10, 62, 414, 32);
 		contentPane.add(ScegliAtleta_CO);
 		
-		JButton btnNewButton = new JButton("Ok");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton Indietro_B = new JButton("Indietro");
+		Indietro_B.setBackground(new Color(0, 0, 0));
+		Indietro_B.setBounds(345, 177, 71, 23);
+		contentPane.add(Indietro_B);
+		
+		JButton VisualizzaContratti_B = new JButton("Visualizza i contratti");
+		VisualizzaContratti_B.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//Apre la finestra VisualizzaContrattiAtleta, caricando prima i contratti relativi a quell'atleta
+				//setVisible(false);
 			}
 		});
-		btnNewButton.setBackground(new Color(0, 0, 0));
-		btnNewButton.setBounds(370, 136, 54, 23);
-		contentPane.add(btnNewButton);
+		VisualizzaContratti_B.setBackground(new Color(0, 0, 0));
+		VisualizzaContratti_B.setBounds(10, 109, 127, 23);
+		contentPane.add(VisualizzaContratti_B);
 		
-		JButton btnNewButton_1 = new JButton("Indietro");
-		btnNewButton_1.setBackground(new Color(0, 0, 0));
-		btnNewButton_1.setBounds(289, 136, 71, 23);
-		contentPane.add(btnNewButton_1);
+		JButton InserisciContrattoClub_B = new JButton("Inserisci contratto Club");
+		InserisciContrattoClub_B.setBackground(new Color(0, 0, 0));
+		InserisciContrattoClub_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Apre la finestra AggiungiContrattoClub
+				//setVisible(false);
+			}
+		});
+		InserisciContrattoClub_B.setBounds(10, 143, 144, 23);
+		contentPane.add(InserisciContrattoClub_B);
+		
+		JButton InserisciContrattoSponsor_B = new JButton("Inserisci contratto Sponsor");
+		InserisciContrattoSponsor_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Apre la finestra AggiungiContrattoSponsor
+				//setVisible(false);
+			}
+		});
+		InserisciContrattoSponsor_B.setBackground(new Color(0, 0, 0));
+		InserisciContrattoSponsor_B.setBounds(10, 177, 161, 23);
+		contentPane.add(InserisciContrattoSponsor_B);
 	}
 
 }
