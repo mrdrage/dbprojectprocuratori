@@ -11,6 +11,8 @@ import java.awt.Font;
 import javax.swing.JList;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_ControllaGuadagniAnnuali extends JFrame {
 
@@ -44,6 +46,12 @@ public class M_ControllaGuadagniAnnuali extends JFrame {
 		contentPane.add(ControllaGuadagniAnnuali_List);
 		
 		JButton Indietro_B = new JButton("Ok");
+		Indietro_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Indietro_B.setBackground(new Color(0, 0, 0));
 		Indietro_B.setBounds(553, 390, 45, 23);
 		contentPane.add(Indietro_B);

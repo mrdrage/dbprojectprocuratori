@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_ControllaGuadagniMensili extends JFrame {
 
@@ -43,6 +45,12 @@ public class M_ControllaGuadagniMensili extends JFrame {
 		contentPane.add(ControllaGuadagniMensili_List);
 		
 		JButton Ok_B = new JButton("Ok");
+		Ok_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Ok_B.setBackground(new Color(0, 0, 0));
 		Ok_B.setBounds(571, 386, 45, 23);
 		contentPane.add(Ok_B);

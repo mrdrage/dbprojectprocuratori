@@ -11,6 +11,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_NessunaCollaborazione extends JDialog {
 
@@ -52,6 +54,12 @@ public class M_NessunaCollaborazione extends JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton Annulla_B = new JButton("Annulla");
+				Annulla_B.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						//Torna alla finestra GestioneProcuratore
+						//setVisible(false);
+					}
+				});
 				Annulla_B.setBackground(new Color(0, 0, 0));
 				Annulla_B.setActionCommand("OK");
 				buttonPane.add(Annulla_B);
@@ -59,6 +67,12 @@ public class M_NessunaCollaborazione extends JDialog {
 			}
 			{
 				JButton Avanti_B = new JButton("Avanti");
+				Avanti_B.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						//Si apre la finestra NuovoAtletaCollab che inserisce prima un atleta e poi la successiva collaborazione
+						//setVisible(false);
+					}
+				});
 				Avanti_B.setBackground(new Color(0, 0, 0));
 				Avanti_B.setActionCommand("Cancel");
 				buttonPane.add(Avanti_B);

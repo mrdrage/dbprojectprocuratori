@@ -12,6 +12,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_SelezionaMese extends JFrame {
 
@@ -42,16 +44,36 @@ public class M_SelezionaMese extends JFrame {
 		
 		JComboBox ScegliMese_CO = new JComboBox();
 		ScegliMese_CO.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		ScegliMese_CO.setBounds(10, 74, 146, 22);
+		ScegliMese_CO.setBounds(25, 74, 146, 22);
 		contentPane.add(ScegliMese_CO);
 		
 		JButton Annulla_B = new JButton("Annulla");
-		Annulla_B.setBounds(214, 116, 67, 23);
+		Annulla_B.setBackground(new Color(0, 0, 0));
+		Annulla_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra ControllaGuadagni
+				//setVisible(false);
+			}
+		});
+		Annulla_B.setBounds(122, 116, 67, 23);
 		contentPane.add(Annulla_B);
 		
 		JComboBox ScegliAnno_CO = new JComboBox();
 		ScegliAnno_CO.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		ScegliAnno_CO.setBounds(179, 76, 85, 22);
+		ScegliAnno_CO.setBounds(181, 74, 85, 22);
 		contentPane.add(ScegliAnno_CO);
+		
+		JButton Cerca_B = new JButton("Cerca");
+		Cerca_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se il risultato é null, appare la dialog ErroreMese e si torna alla finestra ControllaGuadagni
+				//oppure
+				//Apre la finestra ControllaGuadagniMensili, caricando prima i guadaagni del procuratore dal mese e dall'anno selezionato
+				//setVisible(False)
+			}
+		});
+		Cerca_B.setBackground(new Color(0, 0, 0));
+		Cerca_B.setBounds(199, 116, 67, 23);
+		contentPane.add(Cerca_B);
 	}
 }

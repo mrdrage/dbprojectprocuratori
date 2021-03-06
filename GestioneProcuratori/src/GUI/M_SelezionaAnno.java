@@ -12,6 +12,8 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_SelezionaAnno extends JFrame {
 
@@ -46,8 +48,28 @@ public class M_SelezionaAnno extends JFrame {
 		contentPane.add(ScegliAnno_CO);
 		
 		JButton Annulla_B = new JButton("Annulla");
-		Annulla_B.setBounds(187, 122, 67, 23);
+		Annulla_B.setBackground(new Color(0, 0, 0));
+		Annulla_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra ControllaGuadagni
+				//setVisible(false);
+			}
+		});
+		Annulla_B.setBounds(105, 122, 67, 23);
 		contentPane.add(Annulla_B);
+		
+		JButton Cerca_B = new JButton("Cerca");
+		Cerca_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se il risultato é nullo, appara la dialog ErroreAnno
+				//oppure
+				//Appare la finestra ControllaGuadagniAnnuali caricando prima tutti i guadagni del procuratore nell'anno selezionato
+				//setVisible(false);
+			}
+		});
+		Cerca_B.setBackground(new Color(0, 0, 0));
+		Cerca_B.setBounds(187, 122, 67, 23);
+		contentPane.add(Cerca_B);
 	}
 
 }

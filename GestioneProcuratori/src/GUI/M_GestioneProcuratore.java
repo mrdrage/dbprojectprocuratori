@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_GestioneProcuratore extends JFrame {
 
@@ -132,24 +134,51 @@ public class M_GestioneProcuratore extends JFrame {
 		DataN_TF.setColumns(10);
 		
 		JButton Collaborazioni_B = new JButton("Collaborazioni");
+		Collaborazioni_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se non é presente nessuna collaborazione, apre la dialog NessunaCollaborazione
+				//oppure
+				//Apre la finestra ListaCollaborazioni
+				//setVisible(false);
+				
+			}
+		});
 		Collaborazioni_B.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Collaborazioni_B.setBackground(new Color(0, 0, 0));
 		Collaborazioni_B.setBounds(401, 71, 207, 43);
 		contentPane.add(Collaborazioni_B);
 		
 		JButton Guadagni_B = new JButton("Guadagni");
+		Guadagni_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Si apre la finestra ControllaGuadagni
+				//setVisible(false);
+			}
+		});
 		Guadagni_B.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Guadagni_B.setBackground(new Color(0, 0, 0));
 		Guadagni_B.setBounds(401, 125, 207, 38);
 		contentPane.add(Guadagni_B);
 		
 		JButton Contratti_B = new JButton("Contratti");
+		Contratti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Si apre la finestra Contratti
+				//setVisible(false);
+			}
+		});
 		Contratti_B.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Contratti_B.setBackground(new Color(0, 0, 0));
 		Contratti_B.setBounds(401, 179, 207, 38);
 		contentPane.add(Contratti_B);
 		
 		JButton Atleti_B = new JButton("Atleti");
+		Atleti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Si apre la finestra CercaAtletaDettagli
+				//setVisible(false);
+			}
+		});
 		Atleti_B.setBackground(new Color(0, 0, 0));
 		Atleti_B.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		Atleti_B.setBounds(401, 228, 207, 43);

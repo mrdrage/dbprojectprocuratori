@@ -23,13 +23,18 @@ import java.util.Date;
 
 
 public class Controller {
-	M_DataProcuratoreErrata DataProcuratoreErrata = null;
-	M_CercaProcuratore CercaProcuratore = null;  
 	M_Benvenuto Benvenuto = null;
 	M_NuovoProcuratore NuovoProcuratore = null;
 	ProcuratoriDAOPostgreImpl ProcuratoriDAOpostgreImpl= null;
 	M_ErroreDatabase ErroreDatabase = null;
+	M_DataProcuratoreErrata DataProcuratoreErrata = null;
 	M_ProcuratoreInseritoOk ProcuratoreInseritoOk = null;
+	M_CercaProcuratore CercaProcuratore = null;  
+	
+	
+	public void TornaAllaHome() {
+		Benvenuto.setVisible(true);
+	}
 	
 	public void NuovoProcuratore(String Nome,String Cognome,String CodiceFiscale,String NumeroTelefono,String NumeroTelefono2,String Email,
 			String DataNGiorno, String DataNMese, String DataNAnno)  {
@@ -48,9 +53,7 @@ public class Controller {
  	    String DataNascita = DataNAnno  + DataNMese +DataNGiorno ;
      	procuratore.setDataN(DataNascita);
  	
-//		SimpleDateFormat formatoData1 = new SimpleDateFormat("dd/MM/yyyy");  
-//		Date Data1 = formatoData1.parse(DataNascita);  
-		//procuratore.setDataN(Data1);
+// aggiungere il try prima del catch per DataProcuratoreErrata
 		}
 		catch (Exception e) {
 			DataProcuratoreErrata.setVisible(true);
@@ -79,7 +82,6 @@ public class Controller {
 	
 	public void InserisciProcuratore () {
 		Benvenuto.setVisible(false);
-		
 		NuovoProcuratore.setVisible(true);
 		
 	}

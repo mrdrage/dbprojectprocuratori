@@ -24,7 +24,7 @@ public class M_CercaProcuratore extends JFrame {
 
 	private JPanel contentPane;
 	private JComboBox CercaProcuratore_CO;
-	Controller controller;
+	Controller controller = null;
 	TextField TF = new TextField();
 
 	/**
@@ -35,8 +35,8 @@ public class M_CercaProcuratore extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public M_CercaProcuratore(Controller C) {
-		controller = C;
+	public M_CercaProcuratore(Controller c) {
+		controller = c;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 446, 174);
 		contentPane = new JPanel();
@@ -53,7 +53,8 @@ public class M_CercaProcuratore extends JFrame {
 		JButton CercaProcuratore_B = new JButton("Cerca");
 		CercaProcuratore_B.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controller.IniziaRicerca();
+				//Apre GestioneProcuratore con i dati del procuratore inserito
+				setVisible(false);
 			}
 		});
 		CercaProcuratore_B.setBounds(329, 101, 69, 23);

@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_NuovoAtletaCollab extends JFrame {
 
@@ -124,11 +126,26 @@ public class M_NuovoAtletaCollab extends JFrame {
 		SerieClub_TF.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Indietro");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		btnNewButton.setBackground(new Color(0, 0, 0));
 		btnNewButton.setBounds(100, 334, 71, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Avanti");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se é giá presente un atleta con i dati inseriti, appare la dialog ErroreAtletaPresente
+				//oppure
+				//Carica i dati inseriti nel database
+				//Dopodiché apre la finestra NuovaCollaborazione, caricando prima i dati dal DB di Atleti per popolare la combobox in NuovaCollaborazione
+				//setVisible(false);
+			}
+		});
 		btnNewButton_1.setBackground(new Color(0, 0, 0));
 		btnNewButton_1.setBounds(186, 334, 71, 23);
 		contentPane.add(btnNewButton_1);

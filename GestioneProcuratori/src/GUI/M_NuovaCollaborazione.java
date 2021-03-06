@@ -66,11 +66,24 @@ public class M_NuovaCollaborazione extends JFrame {
 		contentPane.add(StipendioMensile_T);
 		
 		JButton Indietro_B = new JButton("Indietro");
+		Indietro_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Torna alla finestra GestioneProcuratore
+				//setVisible(false);
+			}
+		});
 		Indietro_B.setBackground(new Color(0, 0, 0));
 		Indietro_B.setBounds(205, 220, 71, 23);
 		contentPane.add(Indietro_B);
 		
 		JButton Avanti_B = new JButton("Avanti");
+		Avanti_B.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//Se é gia presente una collaborazione con i dati inseriti, apre la dialog ErroreCollaborazionePresente
+				//Altrimenti apre la finestra ListaCollaborazioni
+				//setVisible(false);
+			}
+		});
 		Avanti_B.setBackground(new Color(0, 0, 0));
 		Avanti_B.setBounds(286, 220, 69, 23);
 		contentPane.add(Avanti_B);

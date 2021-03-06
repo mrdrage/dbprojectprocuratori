@@ -1,5 +1,6 @@
 package GUI;
 
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
@@ -14,6 +15,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class M_ProcuratoreInseritoOk extends JDialog {
 
@@ -46,6 +49,12 @@ public class M_ProcuratoreInseritoOk extends JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton ok_B = new JButton("OK");
+				ok_B.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					c.TornaAllaHome();
+					setVisible(false);
+					}
+				});
 				ok_B.setActionCommand("OK");
 				buttonPane.add(ok_B);
 				getRootPane().setDefaultButton(ok_B);
