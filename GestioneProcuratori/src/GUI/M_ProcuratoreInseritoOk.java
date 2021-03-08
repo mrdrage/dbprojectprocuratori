@@ -51,7 +51,7 @@ public class M_ProcuratoreInseritoOk extends JDialog {
 				JButton ok_B = new JButton("OK");
 				ok_B.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-					c.TornaAllaHome();
+//					c.TornaAllaHome();
 					setVisible(false);
 					}
 				});

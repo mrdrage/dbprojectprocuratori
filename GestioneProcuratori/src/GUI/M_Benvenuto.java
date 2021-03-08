@@ -51,7 +51,7 @@ public class M_Benvenuto extends JFrame {
 		JButton InserisciProcuratore_B = new JButton("Inserisci Procuratore");
 		InserisciProcuratore_B.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controller.InserisciProcuratore();
+//				controller.InserisciProcuratore();
 			}
 		});
 		InserisciProcuratore_B.setToolTipText("");

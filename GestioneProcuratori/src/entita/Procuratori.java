@@ -10,9 +10,18 @@ public class Procuratori {
 	private String NumeroTelefonico;
 	private String NumeroTelefonico2;
 	private String Email;
-	private String DataN;
+	private int DataN;
 	
-	
+	public Procuratori(String nome, String cognome, String codicefiscale, String numerotelefonico, String numerotelefonico2, String email, int datan)
+	{
+		this.Nome  = nome;
+		this.Cognome = cognome;
+		this.CodiceFiscale = codicefiscale;
+		this.NumeroTelefonico = numerotelefonico;
+		this.NumeroTelefonico2 = numerotelefonico2;
+		this.Email = email;
+		this.DataN = datan;
+	}
 	
 	public String getNome() {
 		return Nome;
@@ -62,11 +71,11 @@ public class Procuratori {
 		Email = email;
 	}
 	
-	public String getDataN () {
+	public int getDataN () {
 		return DataN;
 	}
-	public void setDataN(String String) {
-		DataN = String;
+	public void setDataN(int datan) {
+		DataN = datan;
 	}
 	
 	
